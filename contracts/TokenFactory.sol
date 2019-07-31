@@ -155,7 +155,7 @@ contract TokenFactory {
     address[] public tokens;
     uint256 private numberOfTokens;
     
-    function createERC20Token(string memory _symbol, string memory _name, uint256 _supplyOfTokens, address payable _owner) public returns (address) {
+    function createERC20Token(string memory _symbol, string memory _name, uint256 _supplyOfTokens, address _owner) public returns (address) {
         ERC20Token tokenContract = new ERC20Token(_symbol, _name, _supplyOfTokens, _owner);
         
         tokens.push(address(tokenContract));
