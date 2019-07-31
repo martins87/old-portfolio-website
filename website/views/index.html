@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+    <title>Simple Contract</title>
+
+    <!-- http://jsfiddle.net/KJQ9K/554/ -->
+
+    <!-- Bootstrap links -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <!-- Local scripts -->
+    <script src="../../scripts/contract-interaction.js"></script>
+</head>
+<body>
+    <br>
+    <div class="container">
+        <div class="card shadow my-5 mx-5 py-5 px-5">
+            <h1 class="text-center">
+                <b>Interacting with a contract</b>
+            </h1>
+            <p class="text-center">Contract code: <a href="https://kovan.etherscan.io/address/0x99f9184e6013acbb178ee8efe1800cb73f184ef2#code" target="_blank">here</a></p>
+            <br>
+            <p class="text-center">
+                <b>Account:</b> <span id="address"></span>
+                <b>Balance:</b> <span id="balance"></span>
+            </p>
+
+            <div class="card-body">
+                <div class="form-row">
+                    <input type="text" id="data" readonly class="form-control" name="number">
+                    <button type="button" class="btn btn-success" id="getNumberBtn">Get Number</button>
+                </div>
+
+                <br>
+
+                <div class="form-row">
+                    <input type="text" class="form-control" id="newNumber" size='20' placeholder="Enter new number to be stored..." />
+                    <button class="btn btn-success" onclick="updateNumber()">Set Number</button>
+                    <br>
+                    <span id="txLink"></span>
+                </div>
+            
+                <br>
+            
+                <div class="form-row">
+                    <input type="text" class="form-control" id="txHash" size='40' placeholder="Enter transaction hash..." />
+                    <button class="btn btn-success" onclick="getTxData()">Show Tx Data</button>
+                    <br>
+                    <span id="transactionData"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

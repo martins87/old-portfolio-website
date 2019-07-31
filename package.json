@@ -2,13 +2,15 @@
   "name": "portfolio-website",
   "version": "1.0.0",
   "description": "My personal Blockchain website",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Daniel Martins",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^1.19.1",
     "web3": "^1.2.0"
   }
 }
