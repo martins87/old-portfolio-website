@@ -9,7 +9,7 @@
   "author": "Daniel Martins",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "nodemon": "^1.19.1",
     "web3": "^1.2.0"
   }
